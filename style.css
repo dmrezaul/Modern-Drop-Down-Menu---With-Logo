@@ -1,0 +1,121 @@
+/*DEFAULT CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*HEADER CSS*/
+
+.header-section {
+    background: #3498db;
+}
+
+.main-content {
+    width: 1100px;
+    margin: auto;
+}
+
+/*HEADER LEFT*/
+
+
+.header-left {
+    width: 30%;
+    float: left;
+}
+
+.header-left h2 {
+    color: #fff;
+    font-size: 35px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+/*HEADER RIGHT*/
+
+.header-right {
+    width: 70%;
+    float: right;
+}
+
+
+.nav-menu {}
+
+.nav-menu ul {
+    text-align: right;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.nav-menu ul li a {
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    border-right: 1px solid #ddd;
+}
+
+.nav-menu ul li:first-child a {
+    border-left: 1px solid #ddd;
+}
+
+.nav-menu ul li:hover>a {
+    background: #2980b9;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: #3498db;
+    border-top: 1px solid #ddd;
+    transition: .4s;
+}
+
+.nav-menu ul li ul li {
+    display: block;
+    margin-left: 0;
+}
+
+.nav-menu ul li ul li a {
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+}
+
+.nav-menu ul li ul li:first-child a {
+    border-left: none;
+}
+
+.nav-menu ul li ul {
+    opacity: 0;
+    visibility: none;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.nav-menu ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
